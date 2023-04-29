@@ -13,15 +13,15 @@ use crate::options::LlamaInvocation;
 // Represents the configuration parameters for a LLamaContext.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ContextParams {
-    n_ctx: i32,
-    n_parts: i32,
-    seed: i32,
-    f16_kv: bool,
-    logits_all: bool,
-    vocab_only: bool,
-    use_mlock: bool,
-    use_mmap: bool,
-    embedding: bool,
+    pub n_ctx: i32,
+    pub n_parts: i32,
+    pub seed: i32,
+    pub f16_kv: bool,
+    pub logits_all: bool,
+    pub vocab_only: bool,
+    pub use_mlock: bool,
+    pub use_mmap: bool,
+    pub embedding: bool,
 }
 
 impl ContextParams {

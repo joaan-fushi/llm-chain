@@ -88,6 +88,28 @@ impl PerExecutor {
         Self::default()
     }
 
+    /// Sets the context parameters for the current `PerExecutor` instance.
+    ///
+    /// # Arguments
+    ///
+    /// * `context_params` - The context parameters for the LLAMA model.
+    ///
+    /// # Returns
+    ///
+    /// A new `PerExecutor` instance with the updated context parameters.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use llm_chain_llama::{PerExecutor, ContextParams};
+    /// let executor = PerExecutor::new().with_context_params(ContextParams::new());
+    /// ```
+    ///
+    pub fn with_context_params(mut self, context_params: ContextParams) -> Self {
+        self.context_params = Some(context_params);
+        self
+    }
+
     /// Sets the model path for the current `PerExecutor` instance.
     ///
     /// # Arguments
